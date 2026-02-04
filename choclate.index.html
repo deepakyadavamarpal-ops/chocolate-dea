@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chocolate Prank 😈</title>
+
+<style>
+body {
+    background-color: #ffb6c1;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 120px;
+    font-size: 36px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 22px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#yes {
+    background-color: green;
+    color: white;
+}
+
+#no {
+    background-color: red;
+    color: white;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will you give me your chocolate today? 🍫😜</h1>
+
+<button id="yes" onclick="yesClicked()">Yes 😇</button>
+<button id="no">No 😈</button>
+
+<script>
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", moveNo);
+noBtn.addEventListener("touchstart", moveNo);
+
+function moveNo() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 60);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+function yesClicked() {
+    document.body.innerHTML = `
+        <h1>HAHA 😂 Deal Done!</h1>
+        <h2>No going back now 🍫😈</h2>
+        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="300">
+    `;
+}
+</script>
+
+</body>
+</html>
